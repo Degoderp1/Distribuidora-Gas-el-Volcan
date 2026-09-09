@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    color: rgb(23, 25, 26);
+    background: #f7f1e8;
+    line-height: 1.55;
+    min-height: 100vh;
+}
+
+.header-sitio {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: peru;
+    backdrop-filter: blur(10px);
+    color: #fff;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.marca img {
+    width: 150px;
+    height: 150px;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6xp;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu a {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  color: #ffffff;
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+
+.menu a:hover,
+.menu a[aria-current="page"] {
+  background: black;
+}
+
+.footer-sitio {
+    background: peru;
+    padding: 42px 0 20px;
+    margin-top: 40px;
+}
+
+.salto-contenido {
+  position: absolute;
+  padding: 0.6rem 1rem;
+  color: #ffffff;
+  background: peru;
+  transform: translateY(-150%);
+}
