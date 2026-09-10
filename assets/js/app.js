@@ -1,11 +1,22 @@
+function setNavOpen(nav, toggle, open) {
+  nav.classList.toggle("is-open", open);
+  toggle.setAttribute("aria-expanded", String(open));
+  toggle.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
+}
+
 function initNav() {
   const toggle = document.querySelector(".nav-toggle");
   const nav = document.querySelector(".nav-sitio");
   if (!toggle || !nav) return;
 
   toggle.addEventListener("click", () => {
-    const open = nav.classList.toggle("is-open");
-    toggle.setAttribute("aria-expanded", String(open));
+    setNavOpen(nav, toggle, !nav.classList.contains("is-open"));
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 1280) {
+      setNavOpen(nav, toggle, false);
+    }
   });
 }
 

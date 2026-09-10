@@ -27,6 +27,12 @@ main {
     position: sticky;
     top: 0;
     z-index: 50;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px 16px;
+    padding: 10px 20px;
     background: peru;
     backdrop-filter: blur(10px);
     color: #fff;
@@ -36,20 +42,28 @@ main {
     display: flex;
     align-items: center;
     gap: 10px;
+    min-width: 0;
     color: black;
     font-size: 30px;
+    text-decoration: none;
 }
 
 .marca img {
     width: 150px;
     height: 150px;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+.nav-sitio {
+    margin-left: auto;
 }
 
 .menu {
   display: flex;
   flex-wrap: wrap;
-  gap: 6xp;
-  margin: 1rem 0 0;
+  gap: 6px;
+  margin: 0;
   padding: 0;
   list-style: none;
   font-size: 20px;
@@ -106,6 +120,10 @@ main {
   display: none;
   width: 46px;
   height: 46px;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   border: 1px solid rgba(255, 255, 255, 0.2);
   background: transparent;
   border-radius: 10px;
@@ -249,29 +267,71 @@ main {
     background: #948383;
 }
 
-@media (max-width: 767px) {
+/* Escritorio (≥ 1280 px): menú horizontal, sin hamburguesa */
+@media (min-width: 1280px) {
   .nav-toggle {
-    display: inline-block;
+    display: none;
+  }
+
+  .nav-sitio {
+    display: block;
+  }
+}
+
+/* Tablet (768 px) y móvil (360 px): menú hamburguesa */
+@media (max-width: 1279px) {
+  .header-sitio {
+    padding: 8px 16px;
+  }
+
+  .marca {
+    font-size: 1.25rem;
+  }
+
+  .marca img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
   }
 
   .nav-sitio {
     display: none;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: var(--nav-h);
+    flex-basis: 100%;
+    width: 100%;
+    margin-left: 0;
     background: #1c1410;
-    padding: 12px 16px 20px;
+    padding: 8px 12px 16px;
   }
 
   .nav-sitio.is-open {
     display: block;
   }
 
-  .nav-sitio ul {
+  .menu {
     flex-direction: column;
+    gap: 4px;
   }
+
+  .menu a {
+    display: block;
+    width: 100%;
   }
+}
+
+/* Móvil (≥ 360 px): marca más compacta para que quepan logo y botón */
+@media (max-width: 767px) {
+  .marca {
+    font-size: 1rem;
+  }
+
+  .marca img {
+    width: 56px;
+    height: 56px;
+  }
+}
 
 @media (max-width: 1100px) {
     .catalogo-grid {
