@@ -25,8 +25,49 @@
         </nav>
     </header>
     
-    <main>
-        <h1>pedido</h1>
+    <main id="contenido">
+        <section class="section pedido-section">
+            <div class="pedido-encabezado">
+                <h1>Realizar pedido</h1>
+                <p>Agrega tus productos uno por uno y revisa el total antes de enviar.</p>
+            </div>
+
+            <form id="pedido-form" class="pedido-simple-form">
+                <h2>Productos</h2>
+
+                <div class="agregar-producto">
+                    <label for="producto-pedido">Producto</label>
+                    <div class="agregar-producto-fila">
+                        <select id="producto-pedido" required></select>
+                        <input id="cantidad-pedido" type="number" min="1" value="1" required aria-label="Cantidad">
+                        <button class="boton" id="agregar-producto" type="button">Agregar</button>
+                    </div>
+                </div>
+
+                <div id="carrito-pedido" class="carrito-pedido" aria-live="polite">
+                    <p class="carrito-vacio">No has agregado productos.</p>
+                </div>
+
+                <div class="pedido-total">
+                    <span>Total:</span>
+                    <strong id="total-pedido">$0</strong>
+                </div>
+
+                <hr>
+
+                <label for="nombre-pedido">Nombre</label>
+                <input id="nombre-pedido" type="text" placeholder="Tu nombre" required>
+
+                <label for="telefono-pedido">Teléfono</label>
+                <input id="telefono-pedido" type="tel" placeholder="Tu teléfono" required>
+
+                <label for="direccion-pedido">Dirección de entrega</label>
+                <input id="direccion-pedido" type="text" placeholder="Tu dirección" required>
+
+                <button class="boton" type="submit">Enviar pedido</button>
+                <p id="pedido-mensaje" class="pedido-mensaje"></p>
+            </form>
+        </section>
     </main>
 
     <footer class="footer-sitio">
@@ -51,5 +92,6 @@
         </div>
     </footer>
     <script src="assets/js/app.js"></script>
+    <script src="assets/js/pedido.js"></script>
 </body>
 </html>

@@ -263,6 +263,126 @@ main {
     }
 }
 
+.pedido-section {
+    max-width: 950px;
+    margin-inline: auto;
+}
+
+.pedido-encabezado {
+    margin-bottom: 2rem;
+}
+
+.pedido-simple-form {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,.08);
+}
+
+.pedido-simple-form h2 {
+    margin-bottom: 1rem;
+}
+
+.pedido-simple-form label {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: .4rem;
+    font-weight: 700;
+}
+
+.pedido-simple-form input,
+.pedido-simple-form select {
+    width: 100%;
+    padding: .75rem;
+    border: 1px solid #b9adad;
+    border-radius: 8px;
+    font: inherit;
+    background: #fff;
+}
+
+.agregar-producto-fila {
+    display: grid;
+    grid-template-columns: 1fr 100px auto;
+    gap: 10px;
+    align-items: end;
+}
+
+.agregar-producto-fila .boton {
+    height: 46px;
+}
+
+.carrito-pedido {
+    margin-top: 1.5rem;
+}
+
+.carrito-item {
+    display: grid;
+    grid-template-columns: 1fr 90px 120px 40px;
+    gap: 10px;
+    align-items: center;
+    padding: .8rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.carrito-item strong {
+    text-align: right;
+}
+
+.carrito-cantidad {
+    font-weight: 600;
+    text-align: center;
+}
+
+.quitar-producto {
+    border: 0;
+    background: transparent;
+    color: #a00;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.carrito-vacio {
+    margin: 0;
+    padding: 1rem;
+    background: #f4eeee;
+    border-radius: 8px;
+}
+
+.pedido-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 2px solid #333;
+    font-size: 1.2rem;
+}
+
+.pedido-total strong {
+    font-size: 1.4rem;
+}
+
+.pedido-simple-form hr {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 2rem 0;
+}
+
+@media (max-width: 700px) {
+    .agregar-producto-fila {
+        grid-template-columns: 1fr 90px;
+    }
+
+    .agregar-producto-fila .boton {
+        grid-column: 1 / -1;
+    }
+
+    .carrito-item {
+        grid-template-columns: 1fr 70px 90px 30px;
+        font-size: .95rem;
+    }
+}
+
 .salto-contenido {
   position: absolute;
   padding: 0.6rem 1rem;
