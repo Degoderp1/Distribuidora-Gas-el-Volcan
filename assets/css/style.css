@@ -102,6 +102,24 @@ main {
     text-decoration: none;
 }
 
+.nav-toggle{
+  display: none;
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  margin: 5px auto;
+  background: #fff;
+}
+
 .carta-producto,
 .carta-articulo{
     background: #948383;
@@ -230,6 +248,30 @@ main {
     text-align: center;
     background: #948383;
 }
+
+@media (max-width: 767px) {
+  .nav-toggle {
+    display: inline-block;
+  }
+
+  .nav-sitio {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: var(--nav-h);
+    background: #1c1410;
+    padding: 12px 16px 20px;
+  }
+
+  .nav-sitio.is-open {
+    display: block;
+  }
+
+  .nav-sitio ul {
+    flex-direction: column;
+  }
+  }
 
 @media (max-width: 1100px) {
     .catalogo-grid {
