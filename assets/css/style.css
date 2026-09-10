@@ -16,6 +16,13 @@ body{
     min-height: 100vh;
 }
 
+main {
+    padding:  2rem;
+    width: 90%;
+    max-width: 2000px;
+    margin-inline: auto;
+}
+
 .header-sitio {
     position: sticky;
     top: 0;
@@ -29,6 +36,8 @@ body{
     display: flex;
     align-items: center;
     gap: 10px;
+    color: black;
+    font-size: 30px;
 }
 
 .marca img {
@@ -43,6 +52,7 @@ body{
   margin: 1rem 0 0;
   padding: 0;
   list-style: none;
+  font-size: 20px;
 }
 
 .menu a {
@@ -62,6 +72,74 @@ body{
     background: peru;
     padding: 42px 0 20px;
     margin-top: 40px;
+}
+
+.hero {
+    background: rgb(95, 61, 61);
+    color: #fff;
+    padding: 72px 0 80px;
+}
+
+.actions{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.boton{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 0;
+    border-radius: 999px;
+    padding: 12px 20px;
+    color: #ffffff;
+    background: black;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.carta-producto,
+.carta-articulo{
+    background: #948383;
+    border: 1px solid white;
+    border-radius: 0px;
+    padding: 22px;
+}
+
+.carta-producto{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.media-producto{
+    background: #948383;
+    min-height: 450px;
+    height: 450px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.media-producto img{
+    width: 400px;
+    height: auto;
+    max-width: 90%;
+    object-fit: contain;
+    display: block;
+}
+
+.section{
+    padding: 56px 0;
+}
+
+.precio{
+    font-weight: 700;
+    font-size: 1.15rem;
 }
 
 .salto-contenido {
