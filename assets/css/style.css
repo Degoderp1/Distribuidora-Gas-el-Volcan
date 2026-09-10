@@ -432,3 +432,145 @@ main {
   background: peru;
   transform: translateY(-150%);
 }
+
+.two-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.page-hero {
+    margin-bottom: 1.5rem;
+}
+
+.page-hero h1,
+.section-title {
+    margin-bottom: 0.5rem;
+}
+
+.page-hero p {
+    max-width: 42rem;
+}
+
+.login-roles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.chip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000;
+    border-radius: 999px;
+    padding: 8px 16px;
+    background: #fff;
+    color: #17191a;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.chip:hover,
+.chip.is-active {
+    background: #000;
+    color: #fff;
+}
+
+.form-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.field {
+    margin-bottom: 1rem;
+}
+
+.field label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 700;
+}
+
+.field input,
+.field select,
+.field textarea {
+    width: 100%;
+    padding: 0.75rem 0.9rem;
+    border: 1px solid #b9adad;
+    border-radius: 8px;
+    background: #fff;
+    font: inherit;
+}
+
+.field textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.field input.is-invalid,
+.field select.is-invalid,
+.field textarea.is-invalid {
+    border-color: #a00;
+}
+
+.hint {
+    margin-top: 0.35rem;
+    font-size: 0.9rem;
+    opacity: 0.75;
+}
+
+.field-error {
+    min-height: 1.2em;
+    margin-top: 0.3rem;
+    color: #a00;
+    font-size: 0.9rem;
+}
+
+.form-card .boton {
+    margin-top: 0.5rem;
+}
+
+.form-msg {
+    margin-top: 0.85rem;
+    font-weight: 600;
+}
+
+.form-msg.is-ok {
+    color: #1b5e20;
+}
+
+.form-msg.is-error {
+    color: #a00;
+}
+
+.contacto-datos {
+    background: #948383;
+    border: 1px solid #fff;
+    padding: 22px;
+}
+
+.contacto-datos h2 {
+    margin-bottom: 0.75rem;
+}
+
+.contacto-datos p,
+.contacto-datos address {
+    margin-bottom: 0.75rem;
+}
+
+.contacto-datos a {
+    color: #17191a;
+    font-weight: 700;
+}
+
+@media (max-width: 800px) {
+    .two-cols {
+        grid-template-columns: 1fr;
+    }
+}
