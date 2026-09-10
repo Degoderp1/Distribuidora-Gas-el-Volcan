@@ -9,17 +9,16 @@
 </head>
 <body>
     <a class="salto-contenido" href="#contenido">Saltar al contenido</a>
+
     <header class="header-sitio">
         <a class="marca" href="index.html">
-            <img src="assets/img/logo.png" alt="Logo distribuidora Gas El Volcán">Distribuidora Gas El Volcán
+            <img src="assets/img/logo.png" alt="Logo Distribuidora Gas El Volcán">
+            Distribuidora Gas El Volcán
         </a>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú">
-            <span></span><span></span><span></span>
-        </button>
-        <nav class="nav-sitio" id="menu-principal" aria-label="Navegación principal">
+        <nav class="nav-sitio" aria-label="Navegación principal">
             <ul class="menu">
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="catalogo.html">Catalogo</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
                 <li><a href="pedido.html">Pedido</a></li>
                 <li><a href="nosotros.html" aria-current="page">Nosotros</a></li>
                 <li><a href="login.html">Login</a></li>
@@ -27,32 +26,89 @@
             </ul>
         </nav>
     </header>
-    
-    <main>
-        <h1>Nosotros</h1>
+
+    <main id="contenido">
+        <section class="section nosotros-hero">
+            <span class="nosotros-kicker">Conoce nuestra empresa</span>
+            <h1>Distribuidora de Gas El Volcán</h1>
+            <p class="nosotros-intro">
+                Somos una empresa familiar ubicada en Chillán, Región de Ñuble,
+                fundada en 1998. Nos dedicamos a la distribución de gas licuado
+                a domicilio para clientes residenciales y comerciales de Chillán
+                y comunas aledañas.
+            </p>
+        </section>
+
+        <section class="nosotros-grid">
+            <article class="carta-articulo">
+                <h2>¿Quiénes somos?</h2>
+                <p>
+                    Distribuidora Gas El Volcán cuenta con 2 camiones de reparto,
+                    3 repartidores, 1 operadora de llamadas y 1 administradora.
+                    La empresa atiende entre 80 y 120 pedidos por día.
+                </p>
+            </article>
+
+            <article class="carta-articulo">
+                <h2>¿Qué ofrecemos?</h2>
+                <p>
+                    Distribuimos cilindros de gas licuado de 5, 11 y 15 kg para
+                    clientes residenciales y comerciales.
+                </p>
+            </article>
+        </section>
+
+        <section class="section nosotros-datos">
+            <h2>Nuestra forma de trabajo</h2>
+            <div class="nosotros-lista">
+                <div>
+                    <strong>Atención a clientes</strong>
+                    <p>Recibimos y gestionamos solicitudes de entrega de gas.</p>
+                </div>
+                <div>
+                    <strong>Despacho a domicilio</strong>
+                    <p>Los repartidores realizan las entregas en Chillán y comunas aledañas.</p>
+                </div>
+                <div>
+                    <strong>Control de stock</strong>
+                    <p>La administradora supervisa la disponibilidad de los cilindros.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section nosotros-proposito">
+            <h2>¿Por qué estamos modernizando el servicio?</h2>
+            <p>
+                Actualmente los pedidos y el control de stock se gestionan de forma
+                manual. Nuestro proyecto busca facilitar los pedidos sin llamadas,
+                permitir que los clientes conozcan el estado de su entrega y mejorar
+                la gestión de pedidos y stock.
+            </p>
+            <a class="boton" href="catalogo.html">Ver catálogo</a>
+        </section>
     </main>
 
     <footer class="footer-sitio">
         <div>
             <section>
                 <h3>Distribuidora de Gas El Volcán</h3>
-                <p>Despacho de gas licuado a domicilio en Chillán y Ñuble. Fundada en 1998</p>
-                <address>Contacto: <a href="mailto:contacto@gaselvolcan.cl">contacto@gaselvolcan.cl</a></address>
-                <p>Fono: <a href="tel:+56987654321">+56 9 8765 4321</a></p>
+                <p>Despacho de gas licuado a domicilio en Chillán y comunas aledañas.</p>
             </section>
             <section>
                 <h3>Navegación</h3>
                 <ul>
-                    <li><a href="catalogo.html">Catalogo</a></li>
-                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="pedido.html">Pedido</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
                 </ul>
             </section>
             <section>
-                <h3>Horario</h3>
-                <p>Centro: Lunes a Sábado, 8:00 a 20:00</p>
+                <h3>Fundada en 1998</h3>
+                <p>Empresa familiar de Chillán, Región de Ñuble.</p>
             </section>
         </div>
     </footer>
+
     <script src="assets/js/app.js"></script>
 </body>
 </html>
