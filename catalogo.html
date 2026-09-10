@@ -25,8 +25,21 @@
         </nav>
     </header>
     
-    <main>
-        <h1>Catalogo</h1>
+   <main id="contenido">
+        <section class="section catalogo-section">
+            <div class="catalogo-encabezado">
+                <div>
+                    <h1>Catálogo</h1>
+                    <p>Encuentra cilindros, accesorios y productos para instalaciones de gas.</p>
+                </div>
+                <label class="catalogo-busqueda">
+                    <span>Buscar producto</span>
+                    <input id="buscar-producto" type="search" placeholder="Ej: cilindro, manguera..." autocomplete="off">
+                </label>
+            </div>
+
+            <div id="catalogo-grid" class="catalogo-grid" aria-live="polite"></div>
+        </section>
     </main>
 
     <footer class="footer-sitio">
@@ -51,5 +64,6 @@
         </div>
     </footer>
     <script src="assets/js/app.js"></script>
+    <script src="assets/js/catalogo.js"></script>
 </body>
 </html>
